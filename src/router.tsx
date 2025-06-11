@@ -13,6 +13,7 @@ import LoginPage from '@/pages/LoginPage';
 import UserProfilePage from '@/pages/UserProfilePage';
 import PostsSearchPage from '@/pages/Posts/PostsSearchPage';
 import AuthPage from '@/pages/AuthPage';
+import HomePage from './pages/HomePage';
 
 // The router of the app.
 const router = createBrowserRouter([
@@ -22,9 +23,8 @@ const router = createBrowserRouter([
     ErrorBoundary: ErrorBoundary,
     HydrateFallback: Loading,
     children: [
-      // /
-      // redirect to /blog/posts
-      { index: true, loader: () => redirect('/blog/posts') },
+      // Home page
+      { index: true, Component: HomePage },
       // /blog
       {
         path: 'blog',
